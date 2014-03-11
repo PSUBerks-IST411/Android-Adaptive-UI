@@ -1,0 +1,200 @@
+::-moz-selection {
+       background-color: #94D029;
+       color: #000;
+}
+
+::selection {
+       background-color: #94D029;
+       color: #000;
+}
+a,
+a:focus,
+a:hover {
+  color: #94D029;
+}
+
+
+/*
+ * Base structure
+ */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/CggrdU0t5c42NcNxN-VM33YhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  text-decoration: none;
+  list-style: none;
+  -webkit-font-smoothing:antialiased;
+  font-smooth: always;
+  color: #ffffff;
+}
+
+
+
+html,
+body {
+
+  font-family: 'Lato', sans-serif;
+  font-size: 0.900em;
+  background: url(../img/bg.png) no-repeat center center fixed; 
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0,0,0,1);
+
+
+}
+
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+
+  display: table;
+  width: 100%;
+  height: 100%;
+ 
+}
+.site-wrapper-inner {
+
+  display: table-cell;
+  vertical-align: top;
+    height: 100%;
+}
+.cover-container {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 1px;
+  margin-bottom: 200px;
+  font-size: 2.7em;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #ffffff;
+  color: rgba(255,255,255,1);
+  box-shadow: 0 4px 2px -2px #9ecaed;
+}
+
+@media (min-width: 800px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+.inner .dw_clock{
+  color: #ffffff;
+}
+
+/*
+ * Cover
+ */
+.inner .cover{
+  margin-top: 10px
+}
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 6em;
+    margin: 30px auto 25px auto;
+}
+
+.cover .inner .dw_clock{
+  color: #F7A127;
+  margin-left: 20px;
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 800px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .dw_clock,
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .dw_clock,
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
