@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/default_2x"
+    android:orientation="vertical" >
+
+   <EditText
+        android:id="@+id/TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bk1"
+        android:ems="10"
+        android:text="Enter Text here....."
+        android:textColor="#ffffff"
+        android:textSize="40sp" >
+
+       
+    </EditText>
+    
+    <ImageButton
+        android:id="@+id/speaker_button"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bk"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/speaker" />
+    
+    <ImageButton
+        android:id="@+id/clear_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/buttonbk"
+        android:src="@drawable/clear" />
+
+</LinearLayout>

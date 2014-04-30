@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/default_2x" >
+    
+    
+         <TextView
+             android:id="@+id/theme"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="120sp"
+             android:text="@string/theme" />
+
+         <TextView
+             android:id="@+id/brightness"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/brightness"
+             android:textColor="#ffffff"
+             android:textSize="145sp" />
+
+</LinearLayout>
