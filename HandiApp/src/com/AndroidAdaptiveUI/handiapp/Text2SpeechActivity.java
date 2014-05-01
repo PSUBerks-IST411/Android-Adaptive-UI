@@ -18,22 +18,25 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import android.os.Build;
 
-public class Text2SpeechActivity extends Activity implements TextToSpeech.OnInitListener {
+public class Text2SpeechActivity extends Activity implements OnInitListener {
 	
 	
 	private TextToSpeech tts;
 	
 	EditText TextInput;
-	ImageButton Speak;
+
 	ImageButton Clear;
-	
+	ImageButton Speak;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_text2_speech);
 		
+		tts = new TextToSpeech(this, this);
+		
 		TextInput = (EditText) findViewById(R.id.TextInput);
+
 		Speak = (ImageButton) findViewById(R.id.speaker_button);
 		Clear = (ImageButton) findViewById(R.id.clear_button);
 		
@@ -41,8 +44,8 @@ public class Text2SpeechActivity extends Activity implements TextToSpeech.OnInit
 
 			@Override
 			   public void onClick(View v) {
-				String text = TextInput.getText().toString();
-				tts.speak(text, TextToSpeech.QUEUE_ADD, null);
+				String text = TextInput.getText().toString();;
+				tts.speak(text, TextToSpeech.QUEUE_ADD,null);
 			}
 
 		});
