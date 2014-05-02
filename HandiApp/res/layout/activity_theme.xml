@@ -1,0 +1,50 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     android:background="@drawable/default_2x">
+    
+     <TextView
+        android:id="@+id/Wallpaper_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="45sp"
+        android:text="@string/wallpaper" />
+    
+    <View
+    		android:layout_width="fill_parent"
+   		 	android:layout_height="1dp"
+    		android:background="@drawable/separator"
+    		android:layout_marginBottom="5dp"
+    		android:layout_below="@+id/Wallpaper_label"
+    		android:layout_marginTop="5dp"/>
+    
+        <ImageView
+             android:id="@+id/livewall"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/wallpaper1" />
+
+         <Gallery
+             android:id="@+id/gallery"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         
+         
+
+         <ImageView
+             android:id="@+id/set_img"
+             android:layout_width="70dp"
+             android:layout_height="70dp"
+             android:layout_marginLeft="350dp"
+             android:layout_marginTop="10dp"
+			 android:src="@drawable/set_img_selector" />
+         
+         
+
+</LinearLayout>

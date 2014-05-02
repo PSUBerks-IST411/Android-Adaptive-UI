@@ -12,8 +12,10 @@
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="texttospeech">Text- 2 -Speech</string>
     <string name="title_activity_text2_speech">Text2SpeechActivity</string>
-    <string name="brightness">Brightness ></string>
+    <string name="brightness">Brightness:</string>
     <string name="theme">Select Theme ></string>
     <string name="textinput">Enter Text here.....</string>
+    <string name="title_activity_theme">ThemeActivity</string>
+    <string name="wallpaper">Select Wallpaper:</string>
 
 </resources>

@@ -10,7 +10,13 @@
              android:layout_height="wrap_content"
              android:text="@string/theme"
              android:textColor="#ffffff"
-             android:textSize="55sp" />
+             android:textSize="50sp" />
+         
+         <View
+    		android:layout_width="fill_parent"
+   		 	android:layout_height="1dp"
+    		android:background="@drawable/separator"/>
+ 
 
          <TextView
              android:id="@+id/brightness"
@@ -19,6 +25,24 @@
              android:text="@string/brightness"
              android:textColor="#ffffff"
              android:textSize="65sp" />
+         
+         <SeekBar
+             android:id="@+id/brightbar"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="5dp"
+    		 android:layout_marginTop="5dp"
+    		 android:layout_marginRight="10dp"
+    		 android:layout_marginLeft="10dp"
+             android:layout_height="50dp"
+             android:minHeight="20dp"
+             android:maxHeight="20dp"
+             android:progressDrawable="@drawable/brightbar_progress"
+        	 android:thumb="@drawable/seek_thumb" />
+         
+         <View
+    		android:layout_width="fill_parent"
+   		 	android:layout_height="1dp"
+    		android:background="@drawable/separator"/>
 
 </LinearLayout>
     

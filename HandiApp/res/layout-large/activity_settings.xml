@@ -4,20 +4,50 @@
     android:orientation="vertical"
     android:background="@drawable/default_2x" >
     
-    
          <TextView
              android:id="@+id/theme"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:textSize="120sp"
+             android:textSize="115sp"
+             android:layout_marginLeft="20dp"
              android:text="@string/theme" />
+         
+          
+         <View
+    		android:layout_width="fill_parent"
+   		 	android:layout_height="1dp"
+    		android:background="@drawable/separator"
+    		android:layout_marginBottom="5dp"
+    		android:layout_marginTop="5dp"/>
 
          <TextView
              android:id="@+id/brightness"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
+             android:layout_marginLeft="20dp"
              android:text="@string/brightness"
-             android:textColor="#ffffff"
              android:textSize="145sp" />
+         
+        <SeekBar
+             android:id="@+id/brightbar"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="5dp"
+    		 android:layout_marginTop="5dp"
+    		 android:layout_marginRight="50dp"
+    		 android:layout_marginLeft="50dp"
+             android:layout_height="100dp"
+             android:minHeight="43dp"
+             android:maxHeight="43dp"
+             android:progressDrawable="@drawable/brightbar_progress"
+        	 android:thumb="@drawable/seek_thumb" />
+         
+         <View
+    		android:layout_width="fill_parent"
+   		 	android:layout_height="1dp"
+    		android:background="@drawable/separator"
+    		android:layout_marginBottom="5dp"
+    		android:layout_marginTop="5dp"/>
+
+         
 
 </LinearLayout>
