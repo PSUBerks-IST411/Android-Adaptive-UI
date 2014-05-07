@@ -4,9 +4,25 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-  <style name="AppTheme" parent="@android:style/Theme">
-      <item name="android:windowNoTitle">true</item>
-   </style>
-
-  
+      <style name="Background0" parent="android:Theme.Holo">
+       <item name="android:windowBackground">@drawable/default_2x</item>
+		<item name="android:windowNoTitle">true</item>
+    </style>
+   
+  <style name="Background1" parent="android:Theme.Holo">
+       <item name="android:windowBackground">@drawable/wallpaper1</item>
+		<item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Background2" parent="android:Theme.Holo">
+       <item name="android:windowBackground">@drawable/wallpaper2</item>
+		<item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Background3" parent="android:Theme.Holo">
+       <item name="android:windowBackground">@drawable/wallpaper3</item>
+		<item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Background4" parent="android:Theme.Holo">
+       <item name="android:windowBackground">@drawable/wallpaper4</item>
+		<item name="android:windowNoTitle">true</item>
+		</style>
 </resources>

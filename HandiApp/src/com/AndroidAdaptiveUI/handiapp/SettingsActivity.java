@@ -60,8 +60,7 @@ public class SettingsActivity extends Activity implements OnInitListener {
 		bright_bar.setProgress(screen_brightness);
 		bright_bar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 		
-		public void onProgressChanged(SeekBar seekBar, int progresValue,
-		     boolean fromUser) {
+		public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
 		    progress = progresValue;
 		    WindowManager.LayoutParams lp = getWindow().getAttributes();
 		    lp.screenBrightness = (float)progress/100;

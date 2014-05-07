@@ -1,17 +1,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@drawable/default_2x" >
+    android:orientation="vertical" >
     
          <TextView
              android:id="@+id/theme"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:textSize="115sp"
              android:layout_marginLeft="20dp"
-             android:text="@string/theme" />
-         
+             android:text="@string/theme"
+             android:textColor="#ffffff"
+             android:textSize="115sp" />
           
          <View
     		android:layout_width="fill_parent"
@@ -26,6 +25,7 @@
              android:layout_height="wrap_content"
              android:layout_marginLeft="20dp"
              android:text="@string/brightness"
+             android:textColor="#ffffff"
              android:textSize="145sp" />
          
         <SeekBar

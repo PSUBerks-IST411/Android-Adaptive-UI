@@ -7,11 +7,13 @@ import android.app.AlertDialog;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.AndroidAdaptiveUI.handiapp.*;
+
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.util.TypedValue;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
@@ -19,10 +21,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.DialogInterface;
-import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,6 +31,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.os.Build;
 
 public class ThemeActivity extends Activity {
@@ -37,33 +39,92 @@ public class ThemeActivity extends Activity {
 	private Gallery gallery;
 	private ImageView Livewall;
 	private ImageView set_img_button;
-	private Integer[] Imgid = { R.drawable.wallpaper1,  R.drawable.wallpaper2,  R.drawable.wallpaper3,  R.drawable.wallpaper4 };
-	private int position =0;
+	private Integer[] Imgid = { R.drawable.wallpaper1,  R.drawable.wallpaper2,  R.drawable.wallpaper3,  R.drawable.wallpaper4, R.drawable.default_2x };
+	private int Position =0;
+	private int wallposition;
+	ContextWrapper context = null;
+	
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_theme);
 		
+		setContentView(R.layout.activity_theme);
+		super.onCreate(savedInstanceState);
 		Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/HelveticaThn.ttf");
+		
 		TextView wallpaper;
 		wallpaper = (TextView) findViewById(R.id.Wallpaper_label);
 		wallpaper.setTypeface(custom_font);
+		
 		Livewall= (ImageView) findViewById(R.id.livewall);
 		Livewall.setImageResource(Imgid[0]);
+	
 		gallery = (Gallery) findViewById(R.id.gallery);
 		gallery.setSpacing(1);
         gallery.setAdapter(new GalleryImageAdapter(this));
+        
         // clicklistener for Gallery
         gallery.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Toast.makeText(ThemeActivity.this, "Your selected position = " + position, Toast.LENGTH_SHORT).show();
                 // show the selected Image
                 Livewall.setImageResource(Imgid[position]);
+                Position=position;
             }
         });
         
-        set_img_button = (ImageView) findViewById(R.id.set_img);
+        set_img_button =(ImageView) findViewById(R.id.set_img);
+        
+		set_img_button.setOnClickListener(new OnClickListener() {			
+			
+			@Override
+			public void onClick(View v) {
+				
+				setWallpaper();
+				/*
+				AlertDialog alertDialog = new AlertDialog.Builder(ThemeActivity.this).create();
+				alertDialog.setTitle("Confirmation");
+	            alertDialog.setMessage("Do you want to set this image as wallpaper?");
+				
+				*/			 
+		        
+			}
+			
+		});		
+		
+	}
+	
+	public void setWallpaper() {
+			
+			//SharedPreferences pref=c.getSharedPreferences("preference",0);
+			//wallposition= pref.getInt("Position", 0);
+			
+			switch (Position) {
+	        case 0:		
+	        	Utils.changeToTheme(this, Utils.THEME_1);
+
+	            break;		
+	        case 1:		
+	        	Utils.changeToTheme(this, Utils.THEME_2);
+
+	            break;		
+	        case 2:		
+	        	Utils.changeToTheme(this, Utils.THEME_3);
+
+	            break;		
+	        case 3:
+	        	Utils.changeToTheme(this, Utils.THEME_4);
+
+	            break;		
+	            
+	        case 4:
+	        	Utils.changeToTheme(this, Utils.THEME_DEFAULT);
+
+	            break;	
+	        }
+			
+		}
 		/*Bitmap bm = null;
 		 bm = Bitmap.createScaledBitmap(bm, 213, 189, true);
 		 
@@ -86,7 +147,7 @@ public class ThemeActivity extends Activity {
 		                                // TODO Auto-generated catch block
 		                                e.printStackTrace();
 		                            }
-		                            Log.d("Gallery Example", "Image setted.");
+		                            Log.d("Gallery Example", "Image settLed.");
 
 		                        }
 		                    });
@@ -95,8 +156,6 @@ public class ThemeActivity extends Activity {
 		            return true;
 		        }
 		    });	 */
-
-	}
 	
 
 	

@@ -15,7 +15,8 @@ public class GalleryImageAdapter extends BaseAdapter {
             R.drawable.wallpaper1,
             R.drawable.wallpaper2,
             R.drawable.wallpaper3,
-            R.drawable.wallpaper4
+            R.drawable.wallpaper4,
+            R.drawable.default_2x
     };
 	
     public GalleryImageAdapter(Context context) 

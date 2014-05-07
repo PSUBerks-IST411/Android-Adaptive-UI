@@ -1,20 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-     android:background="@drawable/default_2x">
+    android:orientation="vertical" >
     
      <TextView
-        android:id="@+id/Wallpaper_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="65sp"
-        android:text="@string/wallpaper" />
-    
+         android:id="@+id/Wallpaper_label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="20dp"
+         android:text="@string/wallpaper"
+         android:textColor="#ffffff"
+         android:textSize="65sp" />
           
          <View
     		android:layout_width="fill_parent"

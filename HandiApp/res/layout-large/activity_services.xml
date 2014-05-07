@@ -1,7 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="@drawable/default_2x">
+    android:layout_height="fill_parent" >
 
 <ImageView
         android:id="@+id/text2speech_img"
@@ -22,6 +21,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:text="@string/texttospeech"
+        android:textColor="#ffffff"
         android:textSize="70sp" />
 
 </RelativeLayout>
